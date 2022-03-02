@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import Header from "./Header";
+import Head from "mext/head"
 
 type Props = {
   children: ReactNode;
@@ -7,6 +8,10 @@ type Props = {
 
 const Layout: React.FC<Props> = (props) => (
   <div>
+    <Head>
+        <title>Blog</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
     <Header />
     <div className="layout">{props.children}</div>
     <style jsx global>{`
